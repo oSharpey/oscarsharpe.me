@@ -1,6 +1,6 @@
 
 <h1 align="center">
-  🚀 My Personal Site 🌵
+   My Personal Site 
 </h1>
 
 My personal website built using the Astro framework and [Astro Cactus theme ](https://github.com/chrismwilliams/astro-theme-cactus)
@@ -19,4 +19,11 @@ My personal website built using the Astro framework and [Astro Cactus theme ](ht
 - [Automatic RSS feed](https://docs.astro.build/en/guides/rss)
 - Shiki code syntax styling
 - Auto-generated [sitemap](https://docs.astro.build/en/guides/integrations-guide/sitemap/)
+
+
+## Site Preview
+
+<div align="center">
+  <img alt="Site Preview" src="./gh-assets/frontpage.png" width="70" />
+</div>
 
