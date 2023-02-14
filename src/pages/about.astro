@@ -1,0 +1,131 @@
+---
+import PageLayout from "@/layouts/Base";
+
+
+const meta = {
+	title: "About",
+	description: "About Page of website with skills ans education",
+};
+
+const dob = new Date("12/29/2003");
+const monthDiff = Date.now() - dob.getTime();
+const ageDiff = new Date(monthDiff);
+const year = ageDiff.getUTCFullYear();
+const age = Math.abs(year - 1970);
+---
+
+<PageLayout meta={meta}>
+	<div class="space-y-6">
+		<h1 class="title">About</h1>
+		<p>
+			Hi I'm Oscar, a {age} year old uni student from Southampton based in Coventry. I'm currently studying BSc Cyber Security at
+			the University of Wariwck.
+		</p>
+		<section class="mt-16">
+			<h2 class="title mb-4 text-xl"><small>Some of the software dev tools & languages I'm familiar with:</small></h2>
+			<ul class="space-y-4 sm:space-y-2">
+				<li>•  
+					<a
+						href="https://www.rust-lang.org/"
+						target="_blank"
+						rel="noopener noreferrer"
+						class="cactus-link inline-block"
+						>Rust
+					</a>
+				</li>
+				<li>•  
+					<a
+						href="https://nodejs.org/en/"
+						target="_blank"
+						rel="noopener noreferrer"
+						class="cactus-link inline-block"
+						>Node.Js
+					</a>
+				</li>
+				<li>•  
+					<a
+						rel="noopener noreferrer"
+						class="cactus-link inline-block"
+						>Javascript
+					</a>
+				</li>
+				<li>•  
+					<a
+						href="https://www.python.org/"
+						target="_blank"
+						rel="noopener noreferrer"
+						class="cactus-link inline-block"
+						>Python
+					</a>
+				</li>
+				<li>•  
+					<a
+						href="https://aws.amazon.com/"
+						target="_blank"
+						rel="noopener noreferrer"
+						class="cactus-link inline-block"
+						>AWS
+					</a>
+				</li>
+				<li>•  
+					<a
+						href="https://www.cloudflare.com/en-gb/"
+						target="_blank"
+						rel="noopener noreferrer"
+						class="cactus-link inline-block"
+						>Cloudflare
+					</a>
+				</li>
+				<li>•  
+					<a
+						href="https://www.docker.com/"
+						target="_blank"
+						rel="noopener noreferrer"
+						class="cactus-link inline-block"
+						>Docker
+					</a>
+				</li>
+			</ul>
+		</section>
+		<section class="mt-16">
+			<h2 class="title mb-4 text-xl"><small>Education:</small></h2>
+			<ul class="space-y-4 sm:space-y-2">
+				<li>•  
+					<a
+						rel="noopener noreferrer"
+						class="cactus-link inline-block"
+						>A Level Maths, Comp Sci & Chemistry (A*A*A*)
+					</a>
+				</li>
+				<li>•  
+					<a
+						href="https://warwick.ac.uk/study/undergraduate/courses/cybersecurity/"
+						target="_blank"
+						rel="noopener noreferrer"
+						class="cactus-link inline-block"
+						>BSc Cyber Security @ Warwick
+					</a>
+				</li>
+			</ul>
+		</section>
+
+		<section class="mt-16">
+			<h2 class="title mb-4 text-xl"><small>Extra Info:</small></h2>
+			<p>
+				Visit my 
+				<a
+					class="cactus-link inline-block"
+					href="https://github.com/oSharpey"
+					target="_blank"
+					rel="noopener noreferrer"
+					aria-label="github repository"
+				>
+					github
+				</a> if you wanna see some of my projects
+			</p>
+			<p>
+				View my <a class="cactus-link inline-block" href="/oscarsgpg"> gpg key</a> in plaintext, or download it <a class="cactus-link inline-block" href="/oscarsharpe.gpg" download>here</a>
+			</p>
+		</section>
+	</div>
+</PageLayout>
