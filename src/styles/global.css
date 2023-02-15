@@ -13,12 +13,12 @@
 
 	:root.dark {
 		color-scheme: dark;
-		--theme-bg: #1d1f21;
+		--theme-bg: #2e3440;
 		--theme-link: #d480aa;
 		--theme-text: #c9cacc;
-		--theme-accent: #2bbc89;
+		--theme-accent: #bf616a;
 		--theme-accent-2: #eee;
-		--theme-quote: #ccffb6;
+		--theme-quote: #a3be8c;
 		--theme-menu-bg: rgb(29 31 33 / 0.85);
 	}
 
