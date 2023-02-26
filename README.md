@@ -24,6 +24,6 @@ My personal website built using the Astro framework and [Astro Cactus theme ](ht
 ## Site Preview
 
 <div align="center">
-  <img alt="Site Preview" src="./gh-assets/frontpage.png"/>
+  <img alt="Site Preview" src="./frontpage.PNG"/>
 </div>
 
