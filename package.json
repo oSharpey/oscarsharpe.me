@@ -1,6 +1,6 @@
 {
 	"name": "oscarsharpe.me",
-	"version": "2.0.2",
+	"version": "2.0.2npm install astro@latest",
 	"scripts": {
 		"dev": "astro dev",
 		"start": "astro dev",
@@ -9,7 +9,6 @@
 		"preview": "astro preview"
 	},
 	"devDependencies": {
-		"@astrojs/image": "0.13.0",
 		"@astrojs/mdx": "^0.15.1",
 		"@astrojs/sitemap": "^1.0.0",
 		"@astrojs/tailwind": "3.0.0",
