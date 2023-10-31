@@ -59,6 +59,7 @@ module.exports = {
 						code: {
 							border: "1px dotted #666",
 							borderRadius: "2px",
+                            backgroundColor: "#282a36",
 						},
 						blockquote: {
 							borderLeftWidth: "none",
