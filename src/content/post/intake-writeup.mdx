@@ -61,7 +61,7 @@ From here you have to work out what to do with hex value, the hints for this are
 - And a reference to the name *"Gray"* in the challenge name
 
 
-Some quick googling of these facts brings you to something called *Gray Code* a form of binary invented by Frank Gray at Bell Labs in the 1940s  
+If you do some googling of "Bell Labs gray" and "Bell labs gray code" it brings you to something called *Gray Code* a form of binary invented by Frank Gray at Bell Labs in the 1940s  
 
 The steps now to get the flag are relatively simple:
 - Convert the hex value to binary
@@ -114,7 +114,7 @@ To break RSA ideally we need to be able to facotrise N, this allows us to find P
 
 <Latex formula='d = e^{-1} \mod \phi(n)' />
 
-So we need to be able to factorise *n* to be able to find *d*. If we try to factorise *n* using a website such as http://factordb.com/ we'll find that its unable to factorise *n*. Instead we can use something called Fermats Factorisation Method. This takes advantage that *p* and *q* may be poorly generated and be very close to eachother (with only around the bottom 500 bits different).
+So we need to be able to factorise *n* to be able to find *d*. If we try to factorise *n* using a website such as http://factordb.com/ we'll find that its unable to factorise *n*. Instead we can use something called Fermats Factorisation Method. This is detailed very well in the computerphile video [Breaking RSA](https://www.youtube.com/watch?v=-ShwJqAalOk&t=9s) and in [Hanno Böck's Blog](https://fermatattack.secvuln.info/). This takes advantage that *p* and *q* may be poorly generated and be very close to eachother (with only around the least sigificant 500 bits different).
 
 The method is based of the fact that you can write an odd integer as a difference of two squares:  
 
@@ -131,7 +131,7 @@ We can then rewrite the top equation as:
 
 The core of the algorithm is to take a educated guess at *a*, say the square root of *a* (the ceiling of this number), and iterate up until you find that *b* is a perfect square. When you find that *b* is a perfect square then you are able to calculate *p* and *q*.
 
-Below is a python solve script to caluclate *p* and *q* using this method, then calculate the private key and and decrypt the message:
+Below is a python solve script to caluclate *p* and *q* using this method, then calculate the private key and and decrypt the message (*You don't actually need to script this to solve this challenge, theres a great tool called [RsaCtfTool](https://github.com/RsaCtfTool/RsaCtfTool) that is able to also perform fermats factorisation method along with many other different RSA attacks. I just though it would nice to see whats actually happening under the hood*):
 
 ```python
 from math import isqrt
@@ -169,9 +169,6 @@ This then gives us
 ```
 pass:for_the_most_walk_the_bins
 ```
-
-*You don't actually need to script this to solve this challenge, theres a great tool called [RsaCtfTool](https://github.com/RsaCtfTool/RsaCtfTool) that is able to also perform fermats factorisation method along with many other different RSA attacks.*
-
 
 As you might notice this is not the key. However it does give you hints on how to find the key. The password is a reference to two tools, foremost and binwalk. These allow you to extract files hidden within other files. 
 
