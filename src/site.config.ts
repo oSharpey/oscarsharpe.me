@@ -1,10 +1,10 @@
 const siteMeta = {
 	author: "Oscar Sharpe",
 	title: "Oscar Sharpe",
-	description: "An opinionated starter theme for Astro",
+	description: "Oscar Sharpe's personal website",
 	lang: "en-GB",
 	ogLocale: "en_GB",
-	githubUrl: "https://github.com/chrismwilliams/astro-theme-cactus",
+	githubUrl: "https://github.com/osharpey/oscarsharpe.me",
 	themeColorLight: "#fafafa",
 	themeColorDark: "#1d1f21",
 };
