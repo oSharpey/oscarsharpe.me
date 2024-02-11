@@ -1,7 +1,7 @@
 {
-	"name": "Astro Theme Cactus Demo",
-	"short_name": "Astro_Cactus",
-	"description": "Starter blog site for Astro",
+	"name": "Oscar Shape Personal Site",
+	"short_name": "O_Sharpe",
+	"description": "Oscar Shape's personal site",
 	"icons": [
 		{
 			"src": "/192x192.png",
