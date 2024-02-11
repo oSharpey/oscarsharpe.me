@@ -50,6 +50,7 @@ module.exports = {
 				},
 				DEFAULT: {
 					css: {
+                        maxWidth: "77ch",
 						a: {
 							"@apply cactus-link no-underline": "",
 						},
