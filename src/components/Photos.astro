@@ -17,7 +17,7 @@ const { withImage, image } = Astro.props
             images.map((img) => (
             <div transition:name="bg"> 
                 <div>
-                    <a href={`/details/${img.default.src}`}>    
+                    <a href={`/details/${img.default.src.}`}>    
                         <Image
                             src={img.default}
                             width="1200"

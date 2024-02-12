@@ -8,7 +8,7 @@ const { photo } = Astro.params
 export async function getStaticPaths() {
     const images = await Astro.glob("/src/portfolio/*.{jpg,jpeg,png,JPG,JPEG,PNG}");
     const params = images.map((image) => ({
-        params: { photo: image.default.src.replace(/^.*[\\/]/, '').replace(/[\#\?].*$/,'')},
+        params: { photo: image.default.src},
     }));
     return params
 }
