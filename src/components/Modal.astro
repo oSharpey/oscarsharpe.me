@@ -3,9 +3,9 @@
 interface Props {
     photo: string
 }
-
 const { photo } = Astro.props
 
+const image = `src/portfolio/${photo}`
 ---
 
 
@@ -13,7 +13,7 @@ const { photo } = Astro.props
 <div class="fixed h-full w-full bg-zinc-800/70 inset-0 z-50 flex items-center justify-center" transition:name="bg">
     <div class="max-w-2xl rounded-lg shadow" ">
         <a href="/photography">
-            <img class="rounded-lg" src={`src/portfolio/${photo}`} alt="" />
+            <img class="rounded-lg" src={image} alt="" />
         </a>
     </div>
 </div>
