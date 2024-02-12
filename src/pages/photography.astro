@@ -1,31 +1,11 @@
 ---
 import PageLayout from "@/layouts/Base";
-import { Image } from "astro:assets";
-
+import Photos from "@/components/Photos";
 
 const meta = {
 	title: "Photography",
 	description: "Photography portfolio",
 };
-
-const images = await Astro.glob("/src/portfolio/*.{jpg,jpeg,png,JPG,JPEG,PNG}");
-var currentImageId;
-
-function enlargeImage(imgid) {
-    var img = document.getElementById(imgid);
-    
-    if (currentImageId) {
-        var currentImg = document.getElementById(currentImageId);
-        currentImg.style.display = "none";
-    }
-
-    img.style.transform = "scale(1.5)";
-    img.syle.transition = "transform 0.25s ease-in-out";
-    img.style.display = "block";
-    currentImageId = imgid;
-}
-
-
 
 ---
 
@@ -34,20 +14,5 @@ function enlargeImage(imgid) {
     <p>
         Just a collection of some photos I've taken, mostly on my Nikon F3 :)
     </p>
-    <div class="grow p-5 sm:p-8">
-        <div class="columns-1 gap-3 sm:columns-2 sm:gap-6 md:columns-3 lg:columns-3 [&>img:not(:first-child)]:mt-6">
-
-                {
-                   images.map((img) => (
-                     <Image
-                       src={img.default}
-                       width="1200"
-                       alt=""
-                       class="h-full max-w-full rounded hover:scale-105 transition-transform duration-250 ease-in-out"
-                    />
-                   ))
-                }
-        </div>
-    </div>
+    <Photos />
 </PageLayout>
-

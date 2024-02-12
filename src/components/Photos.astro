@@ -1,0 +1,37 @@
+---
+import { Image } from "astro:assets";
+
+interface Props {
+    withImage?: boolean;
+    image?: string;
+}
+
+const images = await Astro.glob("/src/portfolio/*.{jpg,jpeg,png,JPG,JPEG,PNG}");
+const { withImage, image } = Astro.props
+---
+
+<div class="grow p-5 sm:p-8">
+    <div class="columns-1 gap-3 sm:columns-2 sm:gap-6 md:columns-3 lg:columns-3 [&>img:not(:first-child)]:mt-6">
+
+        {
+            images.map((img) => (
+            <div transition:name="bg"> 
+                <div>
+                    <a href={`/details/${img.default.src.replace(/^.*[\\/]/, '').replace(/[\#\?].*$/,'')}`}>    
+                        <Image
+                            src={img.default}
+                            width="1200"
+                            alt=""
+                            class="h-full max-w-full rounded hover:scale-105 transition-transform duration-250 ease-in-out mb-6"
+                            id="1"
+                        />
+                    </a>
+                </div>
+            </div>
+            ))
+        }
+        
+    {
+        
+    </div>
+</div>

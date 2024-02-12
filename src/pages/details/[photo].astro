@@ -1,0 +1,29 @@
+---
+import PageLayout from "@/layouts/Base";
+import Modal from "@/components/Modal";
+import Photos from "@/components/Photos";
+
+const { photo } = Astro.params
+
+export async function getStaticPaths() {
+    const images = await Astro.glob("/src/portfolio/*.{jpg,jpeg,png,JPG,JPEG,PNG}");
+    const params = images.map((image) => ({
+        params: { photo: image.default.src.replace(/^.*[\\/]/, '').replace(/[\#\?].*$/,'')},
+    }));
+    return params
+}
+const meta = {
+	title: "Photography",
+	description: "Photography portfolio",
+};
+
+---
+
+<PageLayout meta={meta}>
+    <!--<h1 class="title mb-6">Photography</h1>
+    <p>
+        Just a collection of some photos I've taken, mostly on my Nikon F3 :)
+    </p>-->
+   <!-- <Photos /> -->
+</PageLayout>
+<Modal photo={ photo } />
