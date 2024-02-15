@@ -9,24 +9,6 @@ const meta = {
 };
 
 const images = await Astro.glob("/src/portfolio/*.{jpg,jpeg,png,JPG,JPEG,PNG}");
-var currentImageId;
-
-function enlargeImage(imgid) {
-    var img = document.getElementById(imgid);
-    
-    if (currentImageId) {
-        var currentImg = document.getElementById(currentImageId);
-        currentImg.style.display = "none";
-    }
-
-    img.style.transform = "scale(1.5)";
-    img.syle.transition = "transform 0.25s ease-in-out";
-    img.style.display = "block";
-    currentImageId = imgid;
-}
-
-
-
 ---
 
 <PageLayout meta={meta}>
@@ -39,12 +21,14 @@ function enlargeImage(imgid) {
 
                 {
                    images.map((img) => (
-                     <Image
+                    <a href={img.default.src}> 
+                    <Image
                        src={img.default}
                        width="1200"
                        alt=""
-                       class="h-full max-w-full rounded hover:scale-105 transition-transform duration-250 ease-in-out"
+                       class="h-full max-w-full rounded hover:scale-105 transition-transform duration-250 ease-in-out mb-6"
                     />
+                    </a>
                    ))
                 }
         </div>
