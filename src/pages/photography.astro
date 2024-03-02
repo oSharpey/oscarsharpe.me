@@ -21,7 +21,6 @@ const images = await Astro.glob("/src/portfolio/*.{jpg,jpeg,png,JPG,JPEG,PNG}");
 
                 {
                    images.map((img) => (
-                    <a href={img.default.src}> 
                     <Image
                        src={img.default}
                        width="1200"
